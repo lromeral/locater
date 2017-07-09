@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+
 /**
  * Created by LuisR on 09/07/2017.
  */
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 public class FragmentLocater extends Fragment {
 
     private ImageView mImagen;
+
 
     public static FragmentLocater newInstance() {
         
@@ -33,7 +35,7 @@ public class FragmentLocater extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_locater,container,false);
 
-        mImagen= v.findViewById(R.id.imagen);
+        mImagen= (ImageView)v.findViewById(R.id.imagen);
         setHasOptionsMenu(true);
         return v;
     }
